@@ -64,7 +64,7 @@ abline(h = c(1.96 / sqrt(length(data_diff)), -1.96 / sqrt(length(data_diff))), c
 
 # Como hay 1 pico, se puede suponer que p = 1
 
-model <- arima(data, order = c(2, 1, 1), include.mean = TRUE)
+model <- arima(data, order = c(1,1,2), include.mean = TRUE)
 # Graficar los residuos del modelo
 residuals <- residuals(model)
 plot(residuals, type = "l", col = "blue", xlab = "Tiempo", ylab = "Resiuduos", main = "Residuos del modelo ARIMA(2,1,1)")
